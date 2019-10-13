@@ -58,19 +58,5 @@ public class TestPage {
 		Assert.assertTrue(Title.contains("T-shirts - My Store"));
 	}
 	
-	@Test
-	public void verifySize()
-	{
-		hp.ClickDress();
-		Assert.assertTrue(dp.getSmall().isDisplayed());
-		Assert.assertTrue(dp.getMedium().isDisplayed());
-		Assert.assertTrue(dp.getLarge().isDisplayed());
-	}
-	@Test
-	public void verifypProductCount()
-	{
-		hp.ClickDress();
-		Assert.assertTrue("Failed:Count Mismatch",dp.getProductNumberHeader()==dp.productCount());
-	}
-
+	
 }

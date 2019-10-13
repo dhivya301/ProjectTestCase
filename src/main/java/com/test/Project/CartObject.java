@@ -18,7 +18,7 @@ public class CartObject extends BasePage {
 	@FindBy(xpath = "//a[@class='btn btn-default button button-medium']")
 	private WebElement proceed;
 
-	@FindBy(xpath = "//tr[@id='product_3_13_0_0']")
+	@FindBy(xpath = "//tr[@id='product_3_13_0_0']/td/a/img")
 	private WebElement addedProduct;
 
 	public CartObject() {
@@ -46,10 +46,11 @@ public class CartObject extends BasePage {
 	}
 
 	public void proceedWindow() {
-		String currentWindow = driver.getWindowHandle();
+		//String currentWindow = driver.getWindowHandle();
 		Set<String> windows = driver.getWindowHandles();
 		for (String name : windows) {
-			driver.switchTo().window(name);
+		driver.switchTo().window(name);
+		
 			proceed.click();
 
 		}
