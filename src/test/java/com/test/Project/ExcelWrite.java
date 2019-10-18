@@ -17,7 +17,7 @@ public class ExcelWrite {
 		File f = new File("F:\\Exam\\Book1.xlsx");
 		FileInputStream fr = new FileInputStream(f);
 		Workbook wb = new XSSFWorkbook(fr);
-		Sheet sh = wb.getSheet("sheet1");
+		Sheet sh = wb.getSheet("sheet2");
 		int rowindex=5;
 		int columnindex=7;
 		Row row=sh.getRow(rowindex);
